@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { Feather, X, ChevronRight, ArrowDown, Check } from "lucide-react";
+import { Star, X, ChevronRight, ArrowDown, Check } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Рабочее место — Falcon Work" },
-      { name: "description", content: "Проекты, демо-стенды и терминал в одном окне Falcon Work." },
-      { property: "og:title", content: "Рабочее место — Falcon Work" },
-      { property: "og:description", content: "Проекты, демо-стенды и терминал в одном окне Falcon Work." },
+      { title: "Рабочее место — mentorAI Work" },
+      { name: "description", content: "Проекты, демо-стенды и терминал в одном окне mentorAI Work." },
+      { property: "og:title", content: "Рабочее место — mentorAI Work" },
+      { property: "og:description", content: "Проекты, демо-стенды и терминал в одном окне mentorAI Work." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -55,7 +55,7 @@ function Index() {
   return (
     <div className="flex h-screen flex-col bg-background font-sans text-foreground">
       <header className="flex h-16 shrink-0 items-center gap-6 border-b bg-card px-5">
-        <div className="flex items-center gap-2 text-lg font-semibold"><Feather className="h-5 w-5 text-primary" />Falcon Work</div>
+        <div className="flex items-center gap-2 text-lg font-semibold"><Star className="h-5 w-5 text-primary" />mentorAI Work</div>
         <nav className="flex gap-1">
           {tabs.map((t) => (
             <button key={t} onClick={() => setTab(t)}
@@ -74,7 +74,7 @@ function Index() {
             </div>
             <div className="rounded-lg bg-accent px-3 py-2">
               <div>nasib</div>
-              <div className="text-xs text-muted-foreground">FalconAI-team/nasib</div>
+              <div className="text-xs text-muted-foreground">mentorAI-team/nasib</div>
             </div>
           </section>
 
@@ -106,7 +106,7 @@ function Index() {
         <main className="relative flex min-w-0 flex-1 flex-col overflow-hidden rounded-xl bg-terminal text-terminal-foreground">
           <div className="flex items-center gap-3 border-b border-terminal-border px-4 py-3">
             <span className="font-semibold">nasib</span>
-            <span className="text-terminal-muted">FalconAI-team/nasib</span>
+            <span className="text-terminal-muted">mentorAI-team/nasib</span>
             <div className="ml-auto flex items-center gap-3 text-sm">
               <span className="flex items-center gap-2 text-terminal-muted"><span className="h-2 w-2 rounded-full bg-success" />подключено</span>
               <button className="rounded-md border border-terminal-border px-3 py-1.5 hover:bg-terminal-raised">Пригласить</button>
