@@ -95,7 +95,7 @@ function Index() {
             <div className="mt-3 text-muted-foreground">Сейчас слушают:</div>
             <div className="mt-2 flex flex-wrap gap-1.5">
               {listening.map((l) => (
-                <button key={l.label} disabled={l.disabled} onClick={() => setPort(l.label.split(" ")[0])}
+                <button key={l.label} disabled={l.disabled} onClick={() => setPort(l.label.split(" ")[0] ?? "")}
                   className="rounded-md bg-muted px-2 py-0.5 font-mono text-xs text-foreground/80 hover:bg-accent disabled:opacity-40">{l.label}</button>
               ))}
             </div>
